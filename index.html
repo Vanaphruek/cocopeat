@@ -1,56 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="th">
 <head>
+    <base target="_top">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ลงข้อมูลขุยมะพร้าว</title>
-    <style>
-        html,
-        body {
-            margin: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        iframe {
-            width: 100%;
-            height: 100%;
-        }
-    </style>
+    <title>ลงข้อมูลล้างขุยมะพร้าว</title>
 </head>
-
 <body>
-    <iframe id="formframe" src="" frameborder="0"></iframe>
+    <iframe style="width: 100%; height: 100vh;" scrolling="yes" src="https://www.appsheet.com/start/e3949947-1e84-4732-b29f-16f32bd39596" frameborder="0"></iframe>
 </body>
-<script src="https://static.line-scdn.net/liff/edge/versions/2.15.0/sdk.js"></script>
-<script>
-    
-   
-	function runApp() {
-        liff.getProfile().then(profile => {
-            let userId = profile.userId;
-            let displayName = profile.displayName;
-            let pictureUrl = profile.pictureUrl;
-            let url = "https://www.appsheet.com/start/e3949947-1e84-4732-b29f-16f32bd39596"+"&userId=" + userId + "&displayName=" + displayName + "&pictureUrl=" + pictureUrl;
-            document.getElementById("formframe").src = url;
-			let decodedIDToken = liff.getDecodedIDToken().email;
-        }).catch(err => console.error(err));
-    }
-
-	 	
-	  liff.init({ liffId: "1657745125-V8znm4Lj" }, () => {
-        
-		if (liff.isLoggedIn()) {
-            runApp();
-        } else {
-            liff.login();
-        }
-    }, err => console.error(err.code, error.message));
-
-		
-	
-</script>
-
 </html>
